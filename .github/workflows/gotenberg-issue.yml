@@ -25,9 +25,5 @@ jobs:
         uses: actions/checkout@v5
         
       - name: Build, test and push
-        id: build_test_push
-        uses: ./.github/actions/build-test-push
-        with:
-          version: pr-1
-          platform: linux/${{ matrix.arch }} 
-          alternate_repository: snapshot
+        run: |
+          docker build --tag gotenberg/gotenberg:snapshot -f build/Dockerfile .
