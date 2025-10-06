@@ -182,7 +182,4 @@ if [ "$platform" = "linux/amd64" ] || [ "$platform" = "linux/arm64" ]; then
 fi
 
 echo "✅ Done!"
-echo "tags=$(join "," "${tags[@]}")" >> "$GITHUB_OUTPUT"
-echo "tags_cloud_run=$(join "," "${tags_cloud_run[@]}")" >> "$GITHUB_OUTPUT"
-echo "tags_aws_lambda=$(join "," "${tags_aws_lambda[@]}")" >> "$GITHUB_OUTPUT"
 exit 0
